@@ -1,0 +1,214 @@
+/*==================================================
+=       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
+==================================================*/
+
+//*BASE SIZES*//
+html {
+	font-size: 16px;
+	letter-spacing: 0.0625em;
+}
+
+// @include largetablet {
+//   html { font-size: 17px; }
+// }
+
+// @include desktop { 
+//   html { font-size: 18px; }
+// } 
+
+
+//*SCALABLE MODULES*//
+nav {
+	font-size: $nav-size;
+}
+footer {
+	font-size: $footer-size; 
+}
+
+//*TYPE SCALING*//
+h1 { 
+  font-size: $h1-size;
+}
+ 
+h2 {
+	font-size: $h2-size;
+}
+
+h3 {
+	font-size: $h3-size;  
+}
+  
+
+
+/*=============================
+=       FONTS & COLORS        =
+=============================*/
+h1, h2, h3 {
+	font-family: $headingFont;
+}
+
+body {
+	font-family: $bodyFont;
+	// color: $bodytext;   
+}
+
+// h1 {
+// 	color: $h1text;
+// }
+
+// h2 {
+// 	color: $h2text;
+// }
+
+a {
+  color: $genlink;
+  text-decoration: none;
+   transition: all 0.7s ease-in; 
+  -webkit-transition: all 0.7s ease-in; 
+}
+
+a:hover {
+  color: $genlinkhover;
+}
+
+/*==================================
+=            NAVIGATION            =
+==================================*/
+
+nav ul li,
+#home,
+#portfolio,
+#contact,
+#about,
+#portfolio p {
+	text-align: center;
+}
+
+// #nav li a,
+// #wide-nav-list li a 
+
+nav ul li a {
+	color: $navtxt;
+	transition: all 0.5s ease;
+	text-decoration: none;
+}
+
+// #nav li a:hover,
+// #wide-nav-list li a:hover
+
+nav ul li a:hover {
+	color: $navtxthover;
+	transform: scale(1.3);
+	    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3); 
+}
+
+/*============================
+=            HOME            =
+============================*/ 
+
+#home {
+	h2 {
+	font-size: 1.5rem;
+	}
+	.welcome {
+		font-weight: 700;
+		//letter-spacing: 0.0625em;
+	}
+}
+
+
+/*=============================
+=            ABOUT            =
+=============================*/
+
+#about p {
+	font-weight: 700;
+	//letter-spacing: 0.0625em;
+}
+
+
+/*=================================
+=            PORTFOLIO            =
+=================================*/
+
+#portfolio {
+
+	h1 {
+		font-size: 2.1em; 
+		color: $portfolioH1;
+	}
+	h2 {
+		color: $portfolioH2;
+		//letter-spacing: 0.0625em;
+	}
+	h3 {
+		color: $portfolioH3;  
+		//letter-spacing: 0.0625em;;
+	}
+	.thumb {
+		p {
+			font-size: 1em;
+			color: $portfolioTxt;  
+		}
+	}
+	p {
+		color: $portfolioP;
+		text-align: center; 
+		//letter-spacing: 0.0625em;
+	}
+	.overlay p {
+		font-size: 0.9rem; 
+		color: $widgettext;
+	}
+}
+
+
+
+/*===============================
+=            CONTACT            =
+===============================*/
+#contact {
+	.intro { 
+		font-weight: 700;
+	}
+}
+.contactbox {
+	color: $widgetTXT;
+	ul {
+		text-align: left;
+	}
+	h2 {
+		color: $widgetH; 
+	}
+}
+
+
+/*================================
+=              FOOTER            =
+================================*/
+#footer {
+	p {
+		font-weight: 700;
+	}
+}
+
+/*====================================
+=            SPECIFIC USE            =
+====================================*/
+
+
+
+/*================================================
+=            SKILL BUTTON TEXT COLORS            =
+================================================*/
+
+.html { color: $html; }
+.css { color: $css; }
+.javascript { color: $js; }
+.jquery { color: $jq; }
+.sass { color: $sass; }
+.ajax { color: $AJAX; }
+.mobile { color: $mobile; }
+.svg { color: $svg; } 
+.gulp { color: $gulp; } 

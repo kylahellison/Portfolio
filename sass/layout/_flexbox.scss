@@ -1,0 +1,90 @@
+.flex {
+	display: flex;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.center {
+	justify-content: center;
+}
+
+.center2 {
+	align-items: center;
+}
+
+.centerself {
+	align-self: center;
+}
+
+.end {
+	align-self: flex-end;
+}
+
+
+.order1 {
+	order: -1;
+}
+
+.between {
+	justify-content: space-between; 
+}
+
+
+/*=================================
+=            SPECIFICS            =
+=================================*/
+
+.contactbox {
+	@include largetablet {
+		flex-direction: row; 
+		align-items: center;
+		justify-content: flex-start;; 
+	}
+	.split {
+		@include largetablet {
+			flex-direction: row;
+			align-items: center;
+		} 
+	}
+}
+
+
+
+footer {
+	display: flex;  
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Sticky Footer
+	//Also needed the div with a class of content in the HTML 
+		//And a 100% height on body and html
+		//And flex column on the body tag
+// .content {
+// 	flex: 1 0 auto;
+// 	flex-direction: column;  //NEEDED FOR LEFT NAV
+
+	// @include landscapephone { 
+	// 	flex: 0 1 auto; //NEEDED FOR LEFT NAV 
+	// 	flex-direction: row; //NEEDED FOR LEFT NAV
+	// } 
+
+

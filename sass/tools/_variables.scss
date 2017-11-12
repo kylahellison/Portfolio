@@ -1,0 +1,115 @@
+//ctrl + shift + c = color picker
+
+/*==============================
+=            COLOR PALETTE            =
+==============================*/
+
+
+
+//MAIN PALETTE
+$offwhite: #f2fcf6;   
+$seablue: #007F72; 
+$blue: #1683B7;
+$ltblue: #24AFC2;
+$dksea: #004D52;
+$seagreen: #16CB60;
+$palegreen: #85ED5F;
+$dkgray: #23222B;
+$black: #000;
+$white: #fff;
+ 
+
+/*====================================
+=            COLOR CONFIG            =
+====================================*/
+
+//Shades of yellow+green for skill buttons 
+$html: #8ded20;
+$css: #07f77f;
+$js: #c4fc35; 
+$jq: #07f72e;
+$sass: #b3ed21; 
+$AJAX: #72f707;
+$gulp: #bce25a;  
+$mobile: #4ff787;
+$svg: #15c951;  
+
+//icon colors for social contact
+$linkedin: #70CC72;
+$twitter: #62C2E4;
+$google: #FE4365;
+$github: #C49CDE; 
+
+//BACKGROUNDS
+$bodybg: $offwhite;
+$navbg: $dkgray; 
+$widget-bg: $dksea; 
+$skillsbg: $dkgray;
+
+//TEXT
+$navtxt: $seagreen;
+$navtxthover: $palegreen;
+$widgetTXT: $offwhite; 
+$widgetH: $palegreen;
+$homebox: $palegreen;
+$contactbuttons: $white;
+$portfolioH1: $black;
+$portfolioH2: $offwhite;
+$portfolioH3: $seagreen; 
+$portfolioP: $white;
+$portfolioTxt: $white;
+$widgettext: $white; 
+$genlink: $palegreen;
+$genlinkhover: $dkgray;
+
+//BORDERS
+$menu-lines: $ltblue; 
+$widget: $black; 
+$skills: $black;
+
+
+/*===============================
+=            BORDERS            = 
+===============================*/
+
+$hamburger-style: 5px solid $menu-lines;
+$nav-border: 2px solid $menu-lines; 
+$widget-border: 6px solid $widget;
+$skills-border: 3px solid $skills; 
+
+// $thumb-container-border: 3px solid $thumb-border;
+
+
+ 
+
+/*=============================
+=            FONTS            =
+=============================*/
+
+$headingFont: 'Abril Fatface', Cursive;
+$bodyFont: 'Poppins', Sans-Serif;
+
+
+/*==================================
+=            FONT SIZES            =
+==================================*/
+
+//General
+
+$h1-size: 2.5rem;
+$h2-size: 1.875rem;
+$h3-size: 1.56rem;
+$nav-size: 1.56rem;
+$footer-size: 0.75rem;   
+
+
+/*===================================
+=            BREAKPOINTS            =
+===================================*/
+
+$break-small: 480px;
+$break-landscape-phone: 568px;
+$break-tablet: 768px;
+$break-desktop: 1280px;
+$break-lg-desktop: 1690px; 
+
