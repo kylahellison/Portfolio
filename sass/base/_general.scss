@@ -143,10 +143,8 @@ ul {
  @include largedesktop {
     background: none;
   }
+
   width: 100%;
-  // @include desktop {
-  //   min-width: 85%;
-  // }
 
   .logo {
     min-width: 300px;
@@ -168,6 +166,12 @@ ul {
 .logoimg {
     width: 150px;
     height: 50px;
+}
+
+
+//TEST
+.selected {
+  background-color: black; //need to change this
 }
 
 
@@ -204,7 +208,7 @@ ul {
     padding: 20px;
     color: $homebox;
     background: rgba(0,0,0,0.6);
-  } 
+  }  
 }
 
 /*----------  ABOUT WIDGET  ----------*/
@@ -226,9 +230,12 @@ ul {
   }
   h1 {
     margin-bottom: 30px;
+    @include desktop { 
+      display: none;
+    }
   }
   h3 {
-    margin-top: 15px;
+    margin-top: -5px;
     margin-bottom: 10px;
   }
   p {
@@ -255,7 +262,36 @@ ul {
   -webkit-transition: all 0.7s ease-in;  
   }
   button:hover {
-    color: $navtxthover;  
+    color: $navtxthover;   
+  }
+}
+
+@include largedesktop {
+  #about {
+    max-width: 1300px;  
+    margin: 0 auto;
+    display: block;
+    h1 {
+      text-align: center;
+      margin-bottom: 55px; 
+    }
+    img {
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 25px;
+      margin-left: 220px;
+      width: 275px;
+    }
+    .text {
+      text-align: left;  
+      //max-width: 85%;
+      width: 100%;
+      padding: 0;
+    }
+    div {
+      margin: 0 auto; 
+      width: 145px; 
+    }
   }
 }
 
@@ -265,18 +301,22 @@ ul {
 .overlay {
    width:220px;
    height:220px;
-   display:none; 
+   //display:none; 
+    display: flex; 
+     justify-content: center; 
+      align-items: center;
    position: absolute;
    background-color: black;
    top: 0;
-   opacity: 0.75;
-   z-index: 100;
+   opacity: 0;
+   z-index: -1; //was 100
    padding: 14px 8px 0;
    border-radius: 5px;
+    transition: opacity 0.5s ease-in;
   p {
     text-align: center;
-    padding: 5px;
-  }
+    padding: 5px; 
+  } 
 } //end overlay
 
 .portfolio-wrap {
@@ -303,7 +343,10 @@ ul {
   }
 
   h1 {
-    margin-bottom: 30px;  
+    margin-bottom: 30px; 
+    @include desktop {
+      display: none;
+    } 
   } 
 
  .thumb { 
@@ -372,6 +415,8 @@ ul {
     max-width: 90%; 
   }
 
+
+
   h2 {
     margin: 25px 0 25px;
   }
@@ -383,12 +428,19 @@ ul {
     .thumb-container {   //test
       position: relative;
     }
+
+ 
     .thumb-container:hover .overlay {
-      display: flex; 
-      justify-content: center;
-      align-items: center;
+      // display: flex; 
+      // justify-content: center;
+      // align-items: center;
       z-index: 100;
+    
     } 
+
+    .overlay:hover {
+        opacity: 0.8; 
+    }
     .hidelarge {
       display: none; 
     }
@@ -406,9 +458,15 @@ ul {
     max-width: 85%;
     margin: 0 auto;
   }
+  @include desktop {
+    padding-top: 40px;
+  }
 
   h1 {
     margin-bottom: 30px; 
+    @include desktop {
+      display: none;
+    }
   } 
   .intro {
     margin: 0 auto 20px;
@@ -482,12 +540,12 @@ ul {
       color: $contactbuttons;
       text-align: center;
       line-height: 50px;
-     -webkit-transform: translate3d(0, 0, 0);
-     transform: translate3d(0, 0, 0);
-     -webkit-transition: -webkit-transform ease-out 200ms;
-     transition: -webkit-transform ease-out 200ms;
-     transition: transform ease-out 200ms;
-     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+     // -webkit-transform: translate3d(0, 0, 0);
+     // transform: translate3d(0, 0, 0);
+     // -webkit-transition: -webkit-transform ease-out 200ms;
+     // transition: -webkit-transform ease-out 200ms;
+     // transition: transform ease-out 200ms;
+     // transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
      margin: 10px;
   }
 
@@ -519,6 +577,7 @@ ul {
   .purple {
      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+     transition: color 0.5s ease-in;  
   }
 
   .green:hover,
@@ -662,9 +721,9 @@ $size-inner: $size-circle - $size-thickness * 2;
 
 // legend
 .legend {
-  width: 13em;
+  width: 13.4em;
   padding-left: 0.5em; 
-  padding-right: 0.6em; 
+  padding-right: 0.5em;  
   float: left; 
   
   ul {

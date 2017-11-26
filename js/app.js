@@ -33,12 +33,15 @@ function clickBurger() {
 
     function checkWidth() {
       var width = $(window).width();
+      var homenav = document.getElementById("homenav"); //workaround due to resize issue
       if (width >= 768) {
         console.log("hide all elements except for home");
         $("#about").hide();
         $("#contact").hide();
         $("#portfolio").hide();
         $("#home").show();
+        $(homenav).addClass("selected"); //workaround due to resize issue
+         $(homenav).siblings("li").removeClass("selected"); //workaround due to resize issue
       } else {
         console.log("show all elements");
         $("#about").show();
@@ -63,7 +66,7 @@ function clickBurger() {
        console.log("show/hide siblings based on user click");
 
        //TEST
-        $(targetLI).addClass("selected"); //TEST
+        $(targetLI).addClass("selected"); 
         $(targetLI).siblings("li").removeClass("selected");
 }); //End function to hide and show content on large screens
 
