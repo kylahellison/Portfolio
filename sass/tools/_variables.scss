@@ -7,7 +7,7 @@
 
 
 //MAIN PALETTE
-$offwhite: #f2fcf6;   
+$offwhite: #eafeff;   //f2fcf6
 $seablue: #007F72; 
 $blue: #1683B7;
 $ltblue: #24AFC2;
@@ -42,15 +42,18 @@ $github: #C49CDE;
  
 //BACKGROUNDS
 $bodybg: $offwhite;
+$headerbg: $offwhite;
 $navbg: $dkgray; 
 $widget-bg: $dksea; 
+$contact-bg: $dkgray;
 $skillsbg: $dkgray;
 
 //TEXT
 $navtxt: $seagreen;
 $navtxthover: $palegreen;
 $widgetTXT: $offwhite; 
-$widgetH: $palegreen;
+$contactH: $palegreen; 
+$contactTextShadow: 1px 5px 2px $black;  
 $homebox: $offwhite;
 $contactbuttons: $white;
 $portfolioH1: $black;
@@ -76,8 +79,8 @@ $hamburger-style: 5px solid $menu-lines;
 $nav-border: 2px solid $menu-lines; 
 $widget-border: 6px solid $widget;
 $skills-border: 3px solid $skills; 
-
-// $thumb-container-border: 3px solid $thumb-border;
+$thumb-box: $dkgray;
+$contact-box: $palegreen;  
 
 
  

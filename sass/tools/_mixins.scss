@@ -10,38 +10,39 @@
 
   
 
-
+//break-small: 480px;
+//break-landscape-phone: 568px;
 @mixin largephone {  
   @media only screen and (min-width: #{$break-small}) and (max-width: #{$break-landscape-phone - 1px}) {
     @content;
   }
 }
 
+//break-landscape-phone: 568px;
 @mixin landscapephone {
   @media only screen and (min-width: #{$break-landscape-phone}) {
     @content;
   }
 } 
 
+//break-tablet: 768px;
 @mixin largetablet {
   @media only screen and (min-width: #{$break-tablet}) {
     @content;
   }
 }
 
-
+//break-desktop: 1280px;
 @mixin desktop {
   @media only screen and (min-width: #{$break-desktop}) {
     @content;
   }
 }
 
+//break-lg-desktop: 1690px;
 @mixin largedesktop {
   @media only screen and (min-width: #{$break-lg-desktop}) { 
     @content;
   }
 }
-
-//only screen and (min-width: 768px),
-//only screen and min-width: 700px) and (orientation: landscape) {}
 

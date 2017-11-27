@@ -13,52 +13,56 @@
 	<link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="flex column">
+<body>
 
-<div id="wrapper" class="flex column">  
+<div class="container flex column">  
 
-	<!-- STICKY TOP MENU MOBILE DEVICES -->
-			<div id="sticky-nav">
-				<nav class="mobile-nav">
-					<div class="hamburger" onclick="clickBurger()">
-						<div class="line"></div>
-						<div class="line"></div>
-						<div class="line"></div> 
-					</div>
+	<div class="mobile-nav-container">
+		<!-- STICKY TOP MENU MOBILE DEVICES -->
+		<div id="sticky-nav">
+			<nav class="mobile-nav">
+				<div class="hamburger" onclick="clickBurger()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div> 
+				</div>
 
-					<ul id="nav" class="column" style="top: -270px;"> 
-						<li><a href="#home" rel="home">Home</a></li>
-				        <li><a href="#about" rel="about">About Me</a></li>
-				        <li><a href="#portfolio" rel="portfolio">Portfolio</a></li>
-				        <!--  <li><a href="#" rel="treehouse">Treehouse</a></li>  -->
-				        <li><a href="#contact" rel="contact">Contact</a></li> 
-				    </ul>
-				</nav>
+				<ul id="nav" style="top: -270px;"> <!-- had a class of column -->
+					<li><a href="#home" rel="home">Home</a></li>
+			        <li><a href="#about" rel="about">About Me</a></li>
+			        <li><a href="#portfolio" rel="portfolio">Portfolio</a></li>
+			        <li><a href="#contact" rel="contact">Contact</a></li> 
+			    </ul>
+			</nav>
+		</div><!-- END STICKY TOP MENU FOR MOBILE DEVICES -->
+	</div> <!-- END MOBILE NAV CONTAINER -->
+	
+
+
+	<div class="inner-container" id="header">
+		<!-- WIDE TOP NAV FOR LARGER SCREENS -->
+		<div class="flex column">  <!-- had an id of wide-menu -->
+			<div class="flex between header">
+				<h1>Kylah Ellison</h1>
+				<h1>Web Developer</h1>
 			</div>
-	<!-- END STICKY TOP MENU FOR MOBILE DEVICES -->
 
-	<!-- WIDE TOP NAV FOR LARGER SCREENS -->
-	<div id="wide-menu" class="center2">
-		<div class="logo flex column center2">
-			<h1>Kylah Ellison</h1>
-			<img class="logoimg" src="images/logo-basic.svg" class="centerself">
-			<h1>Web Developer</h1>
+			<nav id="wide-nav">
+				<ul id="wide-nav-list" class="flex between"> 
+					<li id="homenav"><a href="#" rel="home">Home</a></li>
+			        <li><a href="#" rel="about">About Me</a></li>
+			        <li><a href="#" rel="portfolio">Portfolio</a></li>
+			       <!--  <li><a href="#" rel="treehouse">Treehouse</a></li>  -->
+			        <li><a href="#" rel="contact">Contact</a></li> 
+			    </ul>
+			</nav> <!-- END TOP NAV FOR LARGER SCREENS -->
 		</div>
-
-		<nav id="wide-nav">
-			<ul id="wide-nav-list" class="flex between"> 
-				<li id="homenav"><a href="#" rel="home">Home</a></li>
-		        <li><a href="#" rel="about">About Me</a></li>
-		        <li><a href="#" rel="portfolio">Portfolio</a></li>
-		       <!--  <li><a href="#" rel="treehouse">Treehouse</a></li>  -->
-		        <li><a href="#" rel="contact">Contact</a></li> 
-		    </ul>
-		</nav>
-	</div>
-	<!-- END NAV SIDEBAR FOR LARGER SCREENS -->
+<!-- 		<div class="bottom-gradient">
+		</div> -->
+	</div> <!-- END HEADER INNER CONTAINER -->
 
 	<!-- ALL CONTENT -->
-	<div class="content">
+	<div class="inner-container content"> 
 
 		<div id="home" class="flex center center2">
 
@@ -66,24 +70,8 @@
 
 				<h2> I'm a Front-End Web Developer.</h2>
 				<h2>My goal is to make your ideas come to life.</h2>
-
-		<!-- 		<h3 class="centerself">What can I do for you?</h3> -->
-
-				<!-- <p class="centerself">My skillset includes:</p> -->
-
-			<!-- 	<ul class="flex wrap center skills">
-		        	<li class="html">HTML</li>
-		        	<li class="css">CSS</li>
-		        	<li class="javascript">JavaScript</li>
-		        	<li class="jquery">Jquery</li>
-		        	<li class="sass">Sass</li>
-		        	<li class="ajax">AJAX</li>
-		        	<li class="gulp">Gulp</li>
-		        	<li class="svg">SVG</li>
-		        	<li class="mobile">Mobile-First</li>
-		        </ul> -->
 				
-				<div class="welcome shadow1 centerself">
+				<div class="welcome centerself">
 		        	<p>Please check out my Portfolio  page to see what I've worked on lately, or take a look at the 'About Me' section to get an idea of who I am and why you should hire me. You can always get a hold of me using the "Contact" page - I'd love to hear from you!<span></span></p>
 		        </div>
 
@@ -107,28 +95,23 @@
 				<p>I am still taking courses on Treehouse to make sure I'm always up to date with the latest in web design. Want to check out my up-to-the-minute Treehouse stats?</p>
 
 				<div>
-				<button id="open">Click Here!</button> 
+					<button id="open">Click Here!</button> 
 			    </div>
-
-			</div>
-
+			</div> <!-- END TEXT -->
 		</div> <!-- END ABOUT -->
 
 		<div id="portfolio" class="flex center"> <!--  style="display: none" -->
 
 			<h1> Portfolio </h1>
 
-
-
 			<p class="hidelarge">Please click the images to open a new window and view each project.</p>
 			
 			<div class="portfolio-wrap flex center">
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>Web App Dashboard</h2>
 
 					<div class="thumb-container"> <a target="_blank" href="https://kylahellison.github.io/Web-App-Dashboard/"><img src="images/web-app-dashboard-thumb.jpg"></a> <div class="overlay"><a target="_blank" href="https://kylahellison.github.io/Web-App-Dashboard/"><p>For this project, I was provided a mockup for how a user dashboard should look for a potential web application and asked to code it and make it interactive.</p></a></div></div>
-					
 					
 					<div class="flex column center2 skill-wrap">
 						<!-- <h3>Skills Required:</h3> -->
@@ -143,10 +126,9 @@
 		        	
 					<p class="hidelarge">For this project, I was provided a mockup for how a user dashboard should look for a potential web application and asked to code it and make it interactive.</p>
 					
+				</div> <!-- END WEB APP DASHBOARD -->
 
-				</div>
-
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>Interactive Video Player</h2>
 
@@ -165,9 +147,9 @@
 		        	</div>
 					<p class="hidelarge">For this project, I was provided a video, transcript, and site mockup. I built an interactive video player that synchronized the video and the transcript. The transcript highlights as the video progresses and when a user clicks any part of the transcript, the video jumps ahead to the appropriate place in the video.</p>
 
-				</div>
+				</div> <!-- END INTERACTIVE VIDEO PLAYER -->
 
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>SVG Site Update</h2>
 
@@ -183,9 +165,9 @@
 		        	</div>
 					<p class="hidelarge">I was provided code for an existing webpage and asked to replace all existing images with SVGs, then add interactivity to some of those SVGs. </p>
 
-				</div>
+				</div> <!-- END SVG SITE -->
 
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>Online Registration Form</h2>
 
@@ -201,9 +183,9 @@
 		        	</div>
 					<p class="hidelarge">For this project, I was provided a mockup and asked to build a responsive, mobile-friendly and desktop version of an online registration form using media queries and a mobile-first approach.</p>
 
-				</div>
+				</div> <!-- END ONLINE REGISTRATION FORM -->
 
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>Interactive Photo Gallery</h2>
 
@@ -220,9 +202,9 @@
 		        	</div>
 					<p class="hidelarge">For this project, I was provided thumbnail images and descriptions and asked to create an interactive photo gallery using JavaScript and jQuery. At the top of the page there is a search area which can be used to show or hide images depending on user input. When the user clicks on a thumbnail image, that photo will display in a lightbox and show additional information.</p>
 
-				</div>
+				</div> <!-- END INTERACTIVE PHOTO GALLERY -->
 
-				<div class="thumb flex column center center2">
+				<div class="thumb flex column center center2 shadow">
 
 					<h2>Build a Responsive Layout</h2>
 
@@ -239,29 +221,11 @@
 		        	</div>
 					<p class="hidelarge">For this project, I was provided mockups for how a site should look in its mobile, tablet, and desktop versions. I was asked to code this website from scratch using a mobile-first approach, then scale it up using media queries and breakpoints.</p>
 
-				</div>
-
-				<!-- <div class="thumb flex column center center2"> -->
-
-					<!-- <h2>Public API Gallery</h2> -->
-
-					<!-- <div class="thumb-container"><a target="_blank" href="https://kylahellison.github.io/Use-an-API-to-create-an-Image-Gallery/"><img src="images/SpotifyAPI-thumb.JPG"></a><div class="overlay"><a target="_blank" href="https://kylahellison.github.io/Use-an-API-to-create-an-Image-Gallery/"><p>In this project, I used JavaScript to create an image gallery that pulls album artwork from the Spotify API. Users can search for an artist or album to display the requested album artwork from the API.</p></a></div></div> -->
-					
-					<!-- <div class="flex column center2 skill-wrap"> -->
-						<!-- <h3>Skills Required:</h3> -->
-						<!-- <ul class="flex wrap center skills">
-				        	<li class="html">HTML</li>
-				        	<li class="css">CSS</li>
-				        	<li class="javascript">JavaScript</li>
-				        	<li class="ajax">AJAX</li>
-		        		</ul> -->
-		        	<!-- </div>
-					<p class="hidelarge">In this project, I used JavaScript to create an image gallery that pulls album artwork from the Spotify API. Users can search for an artist or album and the page will display the requested album artwork.</p>
-				</div> -->
+				</div> <!-- END RESPONSIVE LAYOUT -->
 			</div><!--  END PORTFOLIO WRAP -->
+		</div> <!-- END PORTFOLIO -->
 
-		</div> <!-- END PORTFOLIO  -->
-
+		<!-- TREEHOUSE STAT WIDGET - hidden until button clicked -->
 		<div id="modal">
 			<div id="treehouse" class="column center"> 
 				<div class="team-treehouse">
@@ -274,8 +238,8 @@
 	    			</div>
 	    			<p id="close" onClick="close()">Close</p>
 				</div>
-			</div> <!-- END TREEHOUSE -->
-		</div>
+			</div> 
+		</div><!-- END TREEHOUSE WIDGET-->
 
 		<div id="contact" class="flex column center2"> <!--  style="display: none" -->
 
@@ -284,67 +248,72 @@
 			<p class="intro">STATUS: Currently accepting work</p>
 
 			<div class="contact-wrap">
-			<div class="contactbox flex center column">
-				<div class="leftalign">
-					<h2>If:</h2>
-				</div>
-				<ul>
-					<li>You have a project proposal you'd like to discuss</li>
-					<li>You have an idea you'd like me to help implement</li>
-					<li>You'd like to collaborate on something</li>
-					<li>You'd simply like to say "Hi"</li>
-				</ul>
-			</div>
+				<div class="contactbox flex center column shadow2">
+					<div class="leftalign">
+						<h2>If:</h2>
+					</div>
+					<ul>
+						<li>You have a project proposal you'd like to discuss</li>
+						<li>You have an idea you'd like me to help implement</li>
+						<li>You'd like to collaborate on something</li>
+						<li>You'd simply like to say "Hi"</li>
+					</ul>
+				</div><!--  END CONTACT BOX 1 -->
 
-			<div class="contactbox flex center column">
-				<div class="leftalign">
-					<h2>Then:</h2>
-				</div>
-				<ul>
-					<li>Please send me an email to: <a href="mailto:kylah.ellison@comcast.net">kylah_ellison@yahoo.com</a></li>
-					<li>Please explain what it is you'd like me to work on, what your deadline is, and what budget you have to work with.</li>
-					<li>I will get back to you within 24 hours to discuss the details.</li>
-				</ul>
-			</div>
+				<div class="contactbox flex center column shadow2">
+					<div class="leftalign">
+						<h2>Then:</h2>
+					</div>
+					<ul>
+						<li>Please send me an email to: <a href="mailto:kylah.ellison@comcast.net">kylah_ellison@yahoo.com</a></li>
+						<li>Please explain what it is you'd like me to work on, what your deadline is, and what budget you have to work with.</li>
+						<li>I will get back to you within 24 hours to discuss the details.</li>
+					</ul>
+				</div> <!--  END CONTACT BOX 2 -->
 
-			<div class="contactbox flex center column socialbox">
-				<div class="leftalign">
-					<h2>Don't forget:</h2>
-				</div>
-				<div class="split flex column">
-					<div class="l-split">
-						<p>You can also get a hold of me via:</p>
-						<div class="socialcontact flex center">
-							<a target="_blank" href="https://www.linkedin.com/in/kylah-ellison-20452920" class="green"> <i class="fa fa-linkedin fa-lg"></i> </a>
-							<a target="_blank" href="https://twitter.com/Knique07" class="lightblue"> <i class="fa fa-twitter fa-lg"></i> </a>
-							<a target="_blank" href="#" class="red"> <i class="fa fa-google-plus fa-lg"></i> </a>
+				<div class="contactbox flex center column socialbox shadow2">
+					<div class="leftalign">
+						<h2>Don't forget:</h2>
+					</div>
+					<div class="split flex column">
+						<div class="l-split">
+							<p>You can also get a hold of me via:</p>
+							<div class="socialcontact flex center">
+								<a target="_blank" href="https://www.linkedin.com/in/kylah-ellison-20452920" class="green"> <i class="fa fa-linkedin fa-lg"></i> </a>
+								<a target="_blank" href="https://twitter.com/Knique07" class="lightblue"> <i class="fa fa-twitter fa-lg"></i> </a>
+								<a target="_blank" href="#" class="red"> <i class="fa fa-google-plus fa-lg"></i> </a>
+							</div>
+						</div>
+					<div>
+						<p>Or check out my GitHub profile:</p>
+						<div class="githubcontact flex center">
+							<a href="https://github.com/kylahellison" class=" purple"> <i class="fa fa-github fa-lg"></i> </a>
 						</div>
 					</div>
-				<div>
-					<p>Or check out my GitHub profile:</p>
-					<div class="githubcontact flex center">
-						<a href="https://github.com/kylahellison" class=" purple"> <i class="fa fa-github fa-lg"></i> </a>
-					</div>
-				</div>
-			</div>
-		</div><!-- END CONTACT-WRAP -->
+				</div> <!--  END CONTACT BOX 3 -->
+			</div><!-- END CONTACT-WRAP -->
 		</div><!--  END CONTACT -->
 
-	</div> <!-- END CONTENT -->
+	</div> <!-- END CONTENT INNER CONTAINER -->
 
-</div> <!-- END WRAPPER -->
+	</div> <!-- END CONTAINER (main wrapper) -->
 
-<footer id="footer" class="column">
-<a href="#home"><p class="totop">Back to Top</p></a>
-      <ul class="flex center">
-        <li><a target="_blank" href="https://twitter.com/Knique07" class="social"><img src="images/Twitter.svg"></a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/kylah-ellison-20452920" class="social"><img src="images/Linkedin.svg"></a></li>
-        <li><a target="_blank" href="https://github.com/kylahellison" class="social"><img src="images/Github.svg"></a></li>
-        <li><a href="mailto:kylah_ellison@yahoo.com"><img src="images/391-mail4.svg"></a></li>
-      </ul>
-      <p class="centerself">&copy 2017 Kylah Ellison</p>
-</footer>
+	<div id="footer" class="inner-container flex column">
+		<footer class="foot-container column">			
+		      <ul class="flex center">
+		        <li><a target="_blank" href="https://twitter.com/Knique07" class="social"><img src="images/Twitter.svg"></a></li>
+		        <li><a target="_blank" href="https://www.linkedin.com/in/kylah-ellison-20452920" class="social"><img src="images/Linkedin.svg"></a></li>
+		        <li><a target="_blank" href="https://github.com/kylahellison" class="social"><img src="images/Github.svg"></a></li>
+		        <li><a href="mailto:kylah_ellison@yahoo.com"><img src="images/391-mail4.svg"></a></li>
+		      </ul>
+		      <div class="flex between totop">
+			      <p class="centerself">&copy 2017 Kylah Ellison</p>
+			      <a href="#home"><p>Back to Top</p></a>
+			  </div>
+		</footer>
+	</div> <!-- END FOOTER CONTAINER -->
 
+<!-- </div> END CONTAINER (main wrapper) -->
 
 <script src="js/main.js"></script>
 <!-- <script src="js/main.min.js"></script> -->

@@ -61,8 +61,10 @@ function clickBurger() {
        var about = document.getElementById("about");
       var portfolio = document.getElementById("portfolio");
        var contact = document.getElementById("contact");
+      var footer = document.getElementById("footer");
 
        $("#"+target).show().siblings("div").hide();
+       $(footer).show();
        console.log("show/hide siblings based on user click");
 
        //TEST

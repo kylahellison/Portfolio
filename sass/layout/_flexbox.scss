@@ -40,9 +40,39 @@
 =            SPECIFICS            =
 =================================*/
 
+.container,
+.inner-container {
+	display: flex;
+	flex-direction: column;
+}
+
+
+#header { //was #wide-menu
+  @include largetablet {
+    display: flex;
+    flex-direction: column; 
+  }
+}
+
+
+
+ 
+
+
+
+
+
+
+/*----------  CONTACT PAGE  ----------*/
+
+
 .contact-wrap {
-	@include largedesktop {
-		display: flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include largetablet { 
+		flex-wrap: wrap;
+		justify-content: center;
 		flex-direction: row;
 	}
 }
@@ -72,26 +102,5 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-//Sticky Footer
-	//Also needed the div with a class of content in the HTML 
-		//And a 100% height on body and html
-		//And flex column on the body tag
-// .content {
-// 	flex: 1 0 auto;
-// 	flex-direction: column;  //NEEDED FOR LEFT NAV
-
-	// @include landscapephone { 
-	// 	flex: 0 1 auto; //NEEDED FOR LEFT NAV 
-	// 	flex-direction: row; //NEEDED FOR LEFT NAV
-	// } 
 
 

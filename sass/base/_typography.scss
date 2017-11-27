@@ -180,7 +180,8 @@ nav ul li a:hover {
 		text-align: left;
 	}
 	h2 {
-		color: $widgetH; 
+		color: $contactH;  
+		text-shadow: $contactTextShadow;
 	}
 }
 
