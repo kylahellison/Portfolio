@@ -297,7 +297,6 @@ ul {
   flex-direction: column; }
   @media only screen and (min-width: 768px) {
     #portfolio {
-      background-color: #eafeff;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
@@ -311,8 +310,8 @@ ul {
         display: none; } }
   #portfolio .thumb {
     background-color: #004D52;
-    margin: 20px 0px;
-    padding: 10px 5px; }
+    margin: 20px 10px;
+    padding: 5px 0px; }
     @media only screen and (min-width: 568px) {
       #portfolio .thumb {
         padding: 10px;
@@ -324,7 +323,8 @@ ul {
         max-width: 80%;
         padding: 0;
         margin: 20px 30px;
-        border: none; } }
+        border: none;
+        background-color: #eafeff; } }
   #portfolio p {
     margin-bottom: 10px; }
   #portfolio .thumb-container {
@@ -709,6 +709,9 @@ nav ul li a:hover {
 
 #portfolio h2 {
   color: #eafeff; }
+  @media only screen and (min-width: 768px) {
+    #portfolio h2 {
+      color: #000; } }
 
 #portfolio h3 {
   color: #16CB60; }

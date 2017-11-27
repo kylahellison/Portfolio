@@ -360,7 +360,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   flex-direction: column;
 
    @include largetablet {
-     background-color: #eafeff; //f1efff
       flex-direction: row; 
       flex-wrap: wrap;
       justify-content: center;
@@ -380,9 +379,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
 
  .thumb { 
     @extend %widgetborders;
-    background-color: $widget-bg; 
-    margin: 20px 0px; 
-    padding: 10px 5px;
+    background-color: $thumb-bg-small;  
+    margin: 20px 10px; 
+    padding: 5px 0px;  
 
 
     @include landscapephone {
@@ -396,6 +395,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
       padding: 0; 
       margin: 20px 30px;
       border: none;
+      background-color: $thumb-bg; 
     } 
   } //end thumb
 

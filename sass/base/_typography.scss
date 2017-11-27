@@ -141,11 +141,12 @@ nav ul li a:hover {
 	}
 	h2 {
 		color: $portfolioH2;
-		//letter-spacing: 0.0625em;
+		@include largetablet {
+			color: $portfolioH2-large;
+		}
 	}
 	h3 {
 		color: $portfolioH3;  
-		//letter-spacing: 0.0625em;;
 	}
 	.thumb {
 		p {
@@ -156,7 +157,6 @@ nav ul li a:hover {
 	p {
 		color: $portfolioP;
 		text-align: center; 
-		//letter-spacing: 0.0625em;
 	}
 	.overlay p {
 		font-size: 0.9rem; 
