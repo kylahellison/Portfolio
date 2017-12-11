@@ -13,6 +13,7 @@ $blue: #1683B7;
 $ltblue: #24AFC2;
 $dksea: #004D52;
 $seagreen: #16CB60;
+$ltseagreen: #B1FE95;
 $palegreen: #85ED5F;
 $dkgray: #23222B;
 $black: #000;
@@ -45,7 +46,7 @@ $bodybg: $offwhite;
 $headerbg: $offwhite;
 $navbg: $dkgray; 
 $thumb-bg: $offwhite; 
-$thumb-bg-small: $dksea;  
+$thumb-bg-small: $offwhite; 
 $contact-bg: $dkgray;
 $skillsbg: $dkgray;
 
@@ -54,6 +55,7 @@ $navtxt: $seagreen;
 $navtxthover: $palegreen;
 $widgetTXT: $offwhite; 
 $contactH: $palegreen; 
+$homeheader: $ltseagreen;
 $contactTextShadow: 1px 5px 2px $black;  
 $homebox: $offwhite;
 $contactbuttons: $white;
@@ -62,10 +64,10 @@ $portfolioH2: $offwhite;
 $portfolioH2-large: $black; 
 $portfolioH3: $seagreen; 
 $portfolioP: $white;
-$portfolioTxt: $white;
+$portfolioTxt: $dkgray;
 $widgettext: $white; 
 $genlink: $palegreen;
-$genlinkhover: $dkgray;
+$genlinkhover: $dkgray; 
 
 //BORDERS
 $menu-lines: $ltblue; 
@@ -91,8 +93,8 @@ $contact-box: $palegreen;
 =            FONTS            =
 =============================*/
 
-$headingFont: 'Abril Fatface', Cursive;
-$bodyFont: 'Poppins', Sans-Serif;
+$headingFont: 'Asul', sans-serif;
+$bodyFont: 'Chivo', sans-serif; 
 
 
 /*==================================
