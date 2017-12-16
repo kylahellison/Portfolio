@@ -24,10 +24,6 @@
   display: block;
   padding: 12px; }
 
-#contact .contactbox {
-  border-radius: 5px;
-  border: 6px solid #000; }
-
 /*=================================
 =            UNIVERSAL            =
 =================================*/
@@ -75,11 +71,10 @@ ul {
   -webkit-box-shadow: 5px 5px 5px 3px #23222B;
   box-shadow: 5px 5px 5px 3px #23222B; }
 
-@media only screen and (min-width: 768px) {
-  .shadow2 {
-    -moz-box-shadow: 5px 5px 8px 1px #85ED5F;
-    -webkit-box-shadow: 5px 5px 8px 1px #85ED5F;
-    box-shadow: 5px 5px 8px 1px #85ED5F; } }
+.shadow2 {
+  -moz-box-shadow: 5px 5px 8px 1px #85ED5F;
+  -webkit-box-shadow: 5px 5px 8px 1px #85ED5F;
+  box-shadow: 5px 5px 8px 1px #85ED5F; }
 
 .border {
   width: 70%;
@@ -184,7 +179,6 @@ ul {
 ====================================*/
 /*----------  HOME WIDGET  ----------*/
 #home {
-  flex-direction: column;
   padding: 80px 20px 0; }
   @media only screen and (min-width: 768px) {
     #home {
@@ -198,10 +192,10 @@ ul {
     margin-bottom: 10px; }
   #home .welcome {
     margin-top: 40px;
+    margin-bottom: 20px;
     width: 75%;
     max-width: 600px;
     padding: 20px;
-    color: #eafeff;
     border-top: 8px double black;
     border-bottom: 8px double black; }
 
@@ -283,9 +277,6 @@ ul {
 .overlay {
   width: 220px;
   height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   background-color: black;
   top: 0;
@@ -298,21 +289,10 @@ ul {
     text-align: center;
     padding: 5px; }
 
-.portfolio-wrap {
-  flex-direction: column; }
-  @media only screen and (min-width: 768px) {
-    .portfolio-wrap {
-      flex-direction: row;
-      flex-wrap: wrap; } }
-
 #portfolio {
-  padding: 80px 5px 80px;
-  flex-direction: column; }
+  padding: 80px 5px 80px; }
   @media only screen and (min-width: 768px) {
     #portfolio {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
       min-width: 95%; } }
   @media only screen and (min-width: 568px) {
     #portfolio {
@@ -418,8 +398,7 @@ ul {
         display: none; } }
   #contact .intro {
     margin: 0 auto 20px;
-    max-width: 90%;
-    font-size: 1.2em; }
+    max-width: 90%; }
   #contact .contact-wrap {
     max-width: 1150px; }
   #contact .contactbox {
@@ -475,25 +454,25 @@ ul {
     margin: 7px; }
   #contact div:nth-of-type(3) {
     margin-bottom: 70px; }
-  #contact .green {
-    background-color: #70CC72; }
-  #contact .lightblue {
-    background-color: #62C2E4; }
-  #contact .red {
-    background-color: #FE4365; }
-  #contact .purple {
-    background-color: #C49CDE; }
-  #contact .green,
-  #contact .lightblue,
-  #contact .red,
-  #contact .purple {
+  #contact .linkedinsocial {
+    background-color: #0077B5; }
+  #contact .twittersocial {
+    background-color: #0084b4; }
+  #contact .googlesocial {
+    background-color: #d34836; }
+  #contact .githubsocial {
+    background-color: #7a7a7a; }
+  #contact .linkedinsocial,
+  #contact .twittersocial,
+  #contact .googlesocial,
+  #contact .githubsocial {
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
     transition: color 0.5s ease-in; }
-  #contact .green:hover,
-  #contact .lightblue:hover,
-  #contact .red:hover,
-  #contact .purple:hover {
+  #contact .linkedinsocial:hover,
+  #contact .twittersocial:hover,
+  #contact .googlesocial:hover,
+  #contact .githubsocial:hover {
     color: #000;
     text-shadow: none; }
 
@@ -744,7 +723,8 @@ nav ul li a:hover {
 
 #home .welcome {
   line-height: 1.5;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5); }
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+  color: #eafeff; }
 
 /*=============================
 =            ABOUT            =
@@ -803,6 +783,7 @@ nav ul li a:hover {
 #contact .intro {
   font-weight: 700;
   color: #fff;
+  font-size: 1.2em;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
 
 .contactbox {
@@ -905,6 +886,29 @@ nav ul li a:hover {
   #header {
     display: flex;
     flex-direction: column; } }
+
+#home {
+  flex-direction: column; }
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.portfolio-wrap {
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    .portfolio-wrap {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+#portfolio {
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    #portfolio {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; } }
 
 /*----------  CONTACT PAGE  ----------*/
 .contact-wrap {

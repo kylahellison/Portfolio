@@ -54,7 +54,33 @@
   }
 }
 
+#home {
+	flex-direction: column;
+}
 
+.overlay {
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+}
+
+.portfolio-wrap {
+  flex-direction: column;
+  @include largetablet {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+} //end portfolio wrap
+
+#portfolio {
+  flex-direction: column;
+
+   @include largetablet {
+      flex-direction: row; 
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
 
  
 

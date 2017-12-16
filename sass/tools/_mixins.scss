@@ -1,7 +1,7 @@
-@mixin size($width, $height:$width) {
-	width: $width;
-	height: $height;
-} //@include size( , );
+// @mixin size($width, $height:$width) {
+// 	width: $width;
+// 	height: $height;
+// } //@include size( , );
 
 @mixin margins($top, $bottom) {
 	margin-top: $top;
