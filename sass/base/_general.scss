@@ -312,16 +312,148 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   }
 }
 
+/*----------  TREEHOUSE WIDGET  ----------*/
+
+#modal {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  display: none;
+  color: #fff; 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-transition: display 1.5s;
+  transition: display 1.5s;
+}
+#treehouse {
+  background-color: $dkgray;
+  margin: 15px auto 0;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.team-treehouse {
+  .tPoints {
+    display: none;
+  }
+  .pieChart {
+      .pie {
+        display: none;
+      }
+      .legend {
+        display: none;
+        text-align: center;
+      }
+  }
+}
+
+//TREEHOUSE WHEEL CODE FROM ETHAN NEFF
+    // @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// clearfix
+.group:after {content:"";display:table;clear:both;}
+
+// general
+
+  .team-treehouse {
+    @include margins(15px,10px);
+
+    h2 {
+      @include margins(15px,15px);
+    }
+  }
+
+// pie chart
+.pieChart {
+  width: $size-circle + 5em; //will need to make this bigger at larger screens. originally was size-circle +13em
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+// pie
+.pie {
+  height: $size-circle;
+  width: $size-circle;
+  position: relative;
+  float:left;
+  margin-bottom: 25px; 
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: $size-inner;
+    height: $size-inner;
+    background: $color-background;
+    border-radius: 50%;
+    top: $size-thickness;
+    left: $size-thickness;
+  }
+}
+
+.slice {
+  position: absolute;
+  width: $size-circle;
+  height: $size-circle;
+  clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
+  animation: bake-pie 1s;
+
+  span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    background-color: black;
+    width: $size-circle;
+    height: $size-circle;
+    border-radius: 50%;
+    clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
+  }
+}
+
+// legend
+.legend {
+  width: 13.4em;
+  padding-left: 0.5em; 
+  padding-right: 0.5em;  
+  float: left; 
+  
+  ul {
+    list-style-type: none;
+    list-style-position: inside;
+  }
+  li {
+    height: 1.25em;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black;
+  }
+  span {
+    float: right;
+  } 
+}
+
+  #close {
+    margin: 10px 0 0 0; 
+    transition: color 0.5s ease-in;
+  } 
+  #close:hover {
+    cursor: pointer;
+  }
 
 /*----------  PORTFOLIO  ----------*/
 
 .overlay {
    width:220px;
    height:220px;
-   //display:none; 
-   // display: flex; 
-   // justify-content: center; 
-   // align-items: center;
    position: absolute;
    background-color: black;
    top: 0;
@@ -329,7 +461,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
    z-index: -1; //was 100
    padding: 14px 8px 0;
    border-radius: 5px;
-  transition: opacity 0.5s ease-in;
+   transition: opacity 0.5s ease-in;
   p {
     text-align: center;
     padding: 5px; 
@@ -340,7 +472,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   padding: 80px 5px 80px;  
 
    @include largetablet {
-      min-width: 95%; 
+    min-width: 95%; 
    }
   @include landscapephone {
     padding-bottom: 0px; 
@@ -358,7 +490,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   } 
 
  .thumb { 
-   border: 1px solid $black;
+    border: 1px solid $black;
     margin: 20px 10px; 
     padding: 5px 0px; 
 
@@ -441,9 +573,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
     }
 
     .thumb-container:hover .overlay {
-      // display: flex; 
-      // justify-content: center;
-      // align-items: center;
       z-index: 100;
     } 
 
@@ -486,7 +615,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
     max-width: 1150px;
   }
 .contactbox {
-    // @extend %widgetborders; 
     background-color: $contact-bg;  
     margin: 20px 10px; 
     padding: 10px 5px; 
@@ -520,7 +648,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
           color: $genlinkhover;
         }
       }
-    }
+    } //end UL
     h2 { //was h1
       margin-bottom: 8px; 
 
@@ -538,12 +666,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
           margin-right: 20px;
         }
       }
-    } 
+    } //end split
 
     .leftalign {
       @include largetablet {
         width: 115px;
-        text-align: center;
       }
     }
   }
@@ -557,10 +684,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
       border-radius: 10px; 
       width: 50px;
       height: 50px;
-      color: $contactbuttons;
-      text-align: center;
-      line-height: 50px;
-      margin: 7px;
+      margin: 7px; 
   }
 
   div:nth-of-type(3) {
@@ -568,7 +692,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   }
 
   // ICON COLORS //
-
   .linkedinsocial {
      background-color: $linkedin;
   }
@@ -587,182 +710,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23222b', end
   .googlesocial,
   .githubsocial {
      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
-     transition: color 0.5s ease-in;  
   }
+} //end contact 
 
-  .linkedinsocial:hover,
-  .twittersocial:hover,
-  .googlesocial:hover,
-  .githubsocial:hover {
-     color: $black; 
-     text-shadow: none;
-  }
-}
-
-
-/*----------  TREEHOUSE WIDGET  ----------*/
-
-#modal {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-  display: none;
-  color: #fff; 
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  z-index: 999;
-  position: fixed;
-  left: 0;
-  top: 0;
-  -webkit-transition: display 1.5s;
-  transition: display 1.5s;
-}
-#treehouse {
-  background-color: $dkgray;
-  margin: 15px auto 0;
-  padding: 15px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 15px;
-}
-
-.team-treehouse {
-  .tPoints {
-    display: none;
-  }
-  .pieChart {
-      .pie {
-        display: none;
-      }
-      .legend {
-        display: none;
-        text-align: center;
-      }
-  }
-}
-
-//HAVE TO FIGURE OUT WHERE TO PUT THIS
-//TREEHOUSE WHEEL CODE FROM ETHAN NEFF
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-// properties
-$color-background: #000; //f9f9f9
-$color-primary: #222222;
-$size-circle: 10.5em; //12.5
-$size-thickness: 2.5em;
-$size-inner: $size-circle - $size-thickness * 2;
-
-// clearfix
-.group:after {content:"";display:table;clear:both;}
-
-// general
-
-  .team-treehouse {
-	
-	margin-top: 15px;
-	margin-bottom: 10px;
-    h1, h2 {
-      text-align: center;
-    } 
-    h1 {
-    	font-size: 2.2rem; 
-    }
-    h2 {
-      font-weight: normal;
- 	  font-size: 1.2rem; 
- 	  margin-top: 15px;
- 	  margin-bottom: 15px;
- 	
-    }
-  }
-
-// pie chart
-.pieChart {
-  width: $size-circle + 5em; //will need to make this bigger at larger screens. originally was size-circle +13em
-  margin: 0 auto;
-  padding-top: 1em;
-}
-
-// pie
-.pie {
-  height: $size-circle;
-  width: $size-circle;
-  position: relative;
-  float:left;
-  margin-bottom: 25px; 
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    width: $size-inner;
-    height: $size-inner;
-    background: $color-background;
-    border-radius: 50%;
-    top: $size-thickness;
-    left: $size-thickness;
-  }
-}
-
-.slice {
-  position: absolute;
-  width: $size-circle;
-  height: $size-circle;
-  clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
-  animation: bake-pie 1s;
-
-  span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0; 
-    background-color: black;
-    width: $size-circle;
-    height: $size-circle;
-    border-radius: 50%;
-    clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
-  }
-}
-
-// legend
-.legend {
-  width: 13.4em;
-  padding-left: 0.5em; 
-  padding-right: 0.5em;  
-  float: left; 
-  
-  ul {
-    list-style-type: none;
-    list-style-position: inside;
-    font-size: 0.8em;
-  }
-  li {
-    height: 1.25em;
-    margin-bottom: 0.7em;
-    padding-left: 0.5em;
-    border-left: 1.25em solid black;
-  }
-  em {
-    font-style: normal;
-  }
-  span {
-    float: right;
-    font-weight: bold;
-  } 
-}
-
-  #close {
-    margin: 10px 0 0 0; 
-    text-align: right;
-    transition: color 0.5s ease-in;
-  } 
-  #close:hover {
-    cursor: pointer;
-    color: $navtxthover;
-  }
 
 /*==============================
 =            FOOTER            =
@@ -804,9 +754,7 @@ $size-inner: $size-circle - $size-thickness * 2;
     .totop {
       padding-left: 5px;
       padding-right: 5px;
-      justify-content: space-between; 
       @include landscapephone {
-        justify-content: center;
         margin-top: 10px;
       }
     } // END TOTOP
@@ -816,7 +764,6 @@ $size-inner: $size-circle - $size-thickness * 2;
         } //END MIXIN
       }// END TO-TOP-TEXT
   } // END FOOT CONTAINER
-
 
 } // END FOOTER
 
