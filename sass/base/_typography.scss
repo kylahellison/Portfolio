@@ -1,5 +1,5 @@
 /*==================================================
-=       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
+=       DOCUMENT LEVEL FONT SIZE ADJUSTMENTS       =
 ==================================================*/
 
 //*BASE SIZES*//
@@ -48,8 +48,7 @@ h1, h2, h3 {
 }
 
 body {
-	font-family: $bodyFont;
-	// color: $bodytext;   
+	font-family: $bodyFont;  
 }
 
 a {
@@ -76,17 +75,11 @@ nav ul li,
 	text-align: center;
 }
 
-// #nav li a,
-// #wide-nav-list li a 
-
 nav ul li a {
 	color: $navtxt;
 	transition: all 0.5s ease;
 	text-decoration: none;
 }
-
-// #nav li a:hover,
-// #wide-nav-list li a:hover
 
 nav ul li a:hover {
 	color: $navtxthover;
@@ -139,8 +132,37 @@ nav ul li a:hover {
 	text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.5)
 }
 
+ .team-treehouse {
+    h1, h2 {
+      text-align: center;
+    } 
+    h1 {
+      font-size: 2.2rem; 
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1.2rem; 
+    }
+ }
 
+.legend {
+  ul {
+    font-size: 0.8em;
+  }
+ em {
+    font-style: normal;
+  }
+  span {
+    font-weight: bold;  
+  } 
+}
 
+  #close {
+    text-align: right;
+  } 
+  #close:hover {
+    color: $navtxthover;
+  }
 
 
 /*=================================
@@ -180,7 +202,6 @@ nav ul li a:hover {
 }
 
 
-
 /*===============================
 =            CONTACT            =
 ===============================*/
@@ -207,6 +228,34 @@ nav ul li a:hover {
 	}
 }
 
+   .leftalign {
+      @include largetablet { 
+        text-align: center; 
+      }
+    }
+
+  .socialcontact a,
+  .githubcontact a {
+      color: $contactbuttons;
+      text-align: center;
+      line-height: 50px;
+  }
+
+  .linkedinsocial,
+  .twittersocial,
+  .googlesocial,
+  .githubsocial {
+     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+     transition: color 0.5s ease-in;  
+  }
+
+  .linkedinsocial:hover,
+  .twittersocial:hover,
+  .googlesocial:hover,
+  .githubsocial:hover {
+     color: $black; 
+     text-shadow: none;
+  }
 
 /*================================
 =              FOOTER            =
@@ -243,8 +292,6 @@ nav ul li a:hover {
              0px 18px 23px rgba(0,0,0,0.1); 
 	}
 }
-
-
 
 /*================================================
 =            SKILL BUTTON TEXT COLORS            =

@@ -120,3 +120,18 @@ $break-tablet: 768px;
 $break-desktop: 1280px;
 $break-lg-desktop: 1690px; 
 
+
+/*========================================
+=            TREEHOUSE WIDGET            =
+========================================*/
+
+// properties
+$color-background: $black; //f9f9f9
+$color-primary: #222222;
+$size-circle: 10.5em; //12.5
+$size-thickness: 2.5em;
+$size-inner: $size-circle - $size-thickness * 2;
+
+/*=====  End of TREEHOUSE WIDGET  ======*/
+
+ 

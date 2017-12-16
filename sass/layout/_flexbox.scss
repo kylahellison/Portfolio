@@ -58,6 +58,8 @@
 	flex-direction: column;
 }
 
+/*----------  PORTFOLIO  ----------*/
+
 .overlay {
    display: flex; 
    justify-content: center; 
@@ -81,12 +83,6 @@
       justify-content: center;
   }
 }
-
- 
-
-
-
-
 
 
 /*----------  CONTACT PAGE  ----------*/
@@ -117,10 +113,16 @@
 	}
 }
 
-
+/*----------  FOOTER  ----------*/
 
 footer {
 	display: flex;  
+    .totop {
+      justify-content: space-between; 
+      @include landscapephone {
+        justify-content: center;
+      }
+    }  
 }
  
 

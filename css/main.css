@@ -16,6 +16,10 @@
 /*===================================
 =            BREAKPOINTS            =
 ===================================*/
+/*========================================
+=            TREEHOUSE WIDGET            =
+========================================*/
+/*=====  End of TREEHOUSE WIDGET  ======*/
 .mobile-nav ul li {
   background-color: #23222B;
   border-top: 2px solid #24AFC2; }
@@ -273,6 +277,118 @@ ul {
       margin: 0 auto;
       width: 145px; } }
 
+/*----------  TREEHOUSE WIDGET  ----------*/
+#modal {
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+  display: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-transition: display 1.5s;
+  transition: display 1.5s; }
+
+#treehouse {
+  background-color: #23222B;
+  margin: 15px auto 0;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px; }
+
+.team-treehouse .tPoints {
+  display: none; }
+
+.team-treehouse .pieChart .pie {
+  display: none; }
+
+.team-treehouse .pieChart .legend {
+  display: none;
+  text-align: center; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.team-treehouse {
+  margin-top: 15px;
+  margin-bottom: 10px; }
+  .team-treehouse h2 {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+
+.pieChart {
+  width: 15.5em;
+  margin: 0 auto;
+  padding-top: 1em; }
+
+.pie {
+  height: 10.5em;
+  width: 10.5em;
+  position: relative;
+  float: left;
+  margin-bottom: 25px; }
+  .pie::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 5.5em;
+    height: 5.5em;
+    background: #000;
+    border-radius: 50%;
+    top: 2.5em;
+    left: 2.5em; }
+
+.slice {
+  position: absolute;
+  width: 10.5em;
+  height: 10.5em;
+  clip: rect(0px, 10.5em, 10.5em, 5.25em);
+  animation: bake-pie 1s; }
+  .slice span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 10.5em;
+    height: 10.5em;
+    border-radius: 50%;
+    clip: rect(0px, 10.5em, 10.5em, 5.25em); }
+
+.legend {
+  width: 13.4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  float: left; }
+  .legend ul {
+    list-style-type: none;
+    list-style-position: inside; }
+  .legend li {
+    height: 1.25em;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black; }
+  .legend span {
+    float: right; }
+
+#close {
+  margin: 10px 0 0 0;
+  transition: color 0.5s ease-in; }
+
+#close:hover {
+  cursor: pointer; }
+
 /*----------  PORTFOLIO  ----------*/
 .overlay {
   width: 220px;
@@ -439,8 +555,7 @@ ul {
         margin-right: 20px; } }
     @media only screen and (min-width: 768px) {
       #contact .contactbox .leftalign {
-        width: 115px;
-        text-align: center; } }
+        width: 115px; } }
   #contact .socialbox p {
     margin: 5px 0; }
   #contact .socialcontact a,
@@ -448,9 +563,6 @@ ul {
     border-radius: 10px;
     width: 50px;
     height: 50px;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
     margin: 7px; }
   #contact div:nth-of-type(3) {
     margin-bottom: 70px; }
@@ -466,139 +578,7 @@ ul {
   #contact .twittersocial,
   #contact .googlesocial,
   #contact .githubsocial {
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
-    transition: color 0.5s ease-in; }
-  #contact .linkedinsocial:hover,
-  #contact .twittersocial:hover,
-  #contact .googlesocial:hover,
-  #contact .githubsocial:hover {
-    color: #000;
-    text-shadow: none; }
-
-/*----------  TREEHOUSE WIDGET  ----------*/
-#modal {
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.7);
-  /* Black w/ opacity */
-  display: none;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  z-index: 999;
-  position: fixed;
-  left: 0;
-  top: 0;
-  -webkit-transition: display 1.5s;
-  transition: display 1.5s; }
-
-#treehouse {
-  background-color: #23222B;
-  margin: 15px auto 0;
-  padding: 15px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 15px; }
-
-.team-treehouse .tPoints {
-  display: none; }
-
-.team-treehouse .pieChart .pie {
-  display: none; }
-
-.team-treehouse .pieChart .legend {
-  display: none;
-  text-align: center; }
-
-.group:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.team-treehouse {
-  margin-top: 15px;
-  margin-bottom: 10px; }
-  .team-treehouse h1, .team-treehouse h2 {
-    text-align: center; }
-  .team-treehouse h1 {
-    font-size: 2.2rem; }
-  .team-treehouse h2 {
-    font-weight: normal;
-    font-size: 1.2rem;
-    margin-top: 15px;
-    margin-bottom: 15px; }
-
-.pieChart {
-  width: 15.5em;
-  margin: 0 auto;
-  padding-top: 1em; }
-
-.pie {
-  height: 10.5em;
-  width: 10.5em;
-  position: relative;
-  float: left;
-  margin-bottom: 25px; }
-  .pie::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    width: 5.5em;
-    height: 5.5em;
-    background: #000;
-    border-radius: 50%;
-    top: 2.5em;
-    left: 2.5em; }
-
-.slice {
-  position: absolute;
-  width: 10.5em;
-  height: 10.5em;
-  clip: rect(0px, 10.5em, 10.5em, 5.25em);
-  animation: bake-pie 1s; }
-  .slice span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    width: 10.5em;
-    height: 10.5em;
-    border-radius: 50%;
-    clip: rect(0px, 10.5em, 10.5em, 5.25em); }
-
-.legend {
-  width: 13.4em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  float: left; }
-  .legend ul {
-    list-style-type: none;
-    list-style-position: inside;
-    font-size: 0.8em; }
-  .legend li {
-    height: 1.25em;
-    margin-bottom: 0.7em;
-    padding-left: 0.5em;
-    border-left: 1.25em solid black; }
-  .legend em {
-    font-style: normal; }
-  .legend span {
-    float: right;
-    font-weight: bold; }
-
-#close {
-  margin: 10px 0 0 0;
-  text-align: right;
-  transition: color 0.5s ease-in; }
-
-#close:hover {
-  cursor: pointer;
-  color: #85ED5F; }
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14); }
 
 /*==============================
 =            FOOTER            =
@@ -634,18 +614,16 @@ ul {
         transform: rotate(-30deg) scale(1.5); }
   #footer .foot-container .totop {
     padding-left: 5px;
-    padding-right: 5px;
-    justify-content: space-between; }
+    padding-right: 5px; }
     @media only screen and (min-width: 568px) {
       #footer .foot-container .totop {
-        justify-content: center;
         margin-top: 10px; } }
   @media only screen and (min-width: 568px) {
     #footer .foot-container .to-top-text {
       display: none; } }
 
 /*==================================================
-=       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
+=       DOCUMENT LEVEL FONT SIZE ADJUSTMENTS       =
 ==================================================*/
 html {
   font-size: 16px;
@@ -744,6 +722,31 @@ nav ul li a:hover {
 #about h1 {
   text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.5); }
 
+.team-treehouse h1, .team-treehouse h2 {
+  text-align: center; }
+
+.team-treehouse h1 {
+  font-size: 2.2rem; }
+
+.team-treehouse h2 {
+  font-weight: normal;
+  font-size: 1.2rem; }
+
+.legend ul {
+  font-size: 0.8em; }
+
+.legend em {
+  font-style: normal; }
+
+.legend span {
+  font-weight: bold; }
+
+#close {
+  text-align: right; }
+
+#close:hover {
+  color: #85ED5F; }
+
 /*=================================
 =            PORTFOLIO            =
 =================================*/
@@ -793,6 +796,30 @@ nav ul li a:hover {
   .contactbox h2 {
     color: #85ED5F;
     text-shadow: 1px 5px 2px #000; }
+
+@media only screen and (min-width: 768px) {
+  .leftalign {
+    text-align: center; } }
+
+.socialcontact a,
+.githubcontact a {
+  color: #fff;
+  text-align: center;
+  line-height: 50px; }
+
+.linkedinsocial,
+.twittersocial,
+.googlesocial,
+.githubsocial {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  transition: color 0.5s ease-in; }
+
+.linkedinsocial:hover,
+.twittersocial:hover,
+.googlesocial:hover,
+.githubsocial:hover {
+  color: #000;
+  text-shadow: none; }
 
 /*================================
 =              FOOTER            =
@@ -890,6 +917,7 @@ nav ul li a:hover {
 #home {
   flex-direction: column; }
 
+/*----------  PORTFOLIO  ----------*/
 .overlay {
   display: flex;
   justify-content: center;
@@ -932,7 +960,13 @@ nav ul li a:hover {
     flex-direction: row;
     align-items: center; } }
 
+/*----------  FOOTER  ----------*/
 footer {
   display: flex; }
+  footer .totop {
+    justify-content: space-between; }
+    @media only screen and (min-width: 568px) {
+      footer .totop {
+        justify-content: center; } }
 
 /*# sourceMappingURL=main.css.map */
