@@ -56,8 +56,8 @@ function clickBurger() {
     $('#wide-nav-list a').on('click', function(){
       var targetLI = $(this).parent();
       
-       var target = $(this).attr('rel'); //uses the rel attribute to select the user-selected div by its ID (which matches the rel)
-       var home = document.getElementById("home");
+       var target = $(this).attr('data-rel'); //uses the rel attribute to select the user-selected div by its ID (which matches the rel)
+       var home = document.getElementById("home"); 
        var about = document.getElementById("about");
       var portfolio = document.getElementById("portfolio");
        var contact = document.getElementById("contact");
